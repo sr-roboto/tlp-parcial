@@ -1,7 +1,6 @@
 export default class Configuracion {
   private static instancia: Configuracion;
   private static modo: string;
-  private static estado: string;
   private constructor() {}
 
   static obtenerInstancia(): Configuracion {
@@ -11,9 +10,9 @@ export default class Configuracion {
     return Configuracion.instancia;
   }
 
-  set(opcion: string, estado: string) {
+  set(opcion: string, valor: string) {
     if (opcion === 'modo') {
-      Configuracion.estado = estado;
+      Configuracion.modo = valor;
     }
   }
 
