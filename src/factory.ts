@@ -15,11 +15,18 @@ class EquipoServer {
 
 class EquipoFactory {
   crearEquipo(tipo: string, nombre: string, ram: string, procesador: string) {
-    if (tipo === 'Equipo') {
+    if (tipo === 'Servidor') {
       return new EquipoServer(tipo, nombre, ram, procesador);
     }
   }
 }
 
 const factory = new EquipoFactory();
-const server = factory.crearEquipo('Servidor', 'Dell PowerEdge', '32GB');
+const server = factory.crearEquipo(
+  'Servidor',
+  'Dell PowerEdge',
+  '32GB',
+  'Xeon'
+);
+
+console.log(server?.detalles());

@@ -19,7 +19,7 @@ export default class Configuracion {
 
   get(opcion: string) {
     if (opcion === 'modo') {
-      Configuracion.estado;
+      Configuracion.modo;
     }
   }
 }
