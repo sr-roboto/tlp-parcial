@@ -1,5 +1,5 @@
 export class InventarioViejo {
-  private inventario: Object[] = [];
+  public inventario: Object[] = [];
 
   agregarItem(nombre: string, tipo: string, estado: string) {
     this.inventario.push(nombre, tipo, estado);
@@ -16,7 +16,7 @@ export class AdaptadorInventario {
   }
 
   listarEquipos() {
-    console.log(`${JSON.stringify(this.inventarioViejo)}`);
+    console.log(`${JSON.stringify(this.inventarioViejo.inventario)}`);
   }
 }
 
