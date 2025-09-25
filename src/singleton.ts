@@ -13,14 +13,14 @@ export default class Configuracion {
 
   set(opcion: string, valor: string) {
     if (opcion === 'modo') {
-      return (Configuracion.estado = valor);
+      Configuracion.estado = valor;
     }
   }
 
   get(opcion: string) {
     if (opcion === 'modo') {
       // es undefined si no especifica el return
-      return Configuracion.estado;
+      Configuracion.estado;
     }
   }
 }
